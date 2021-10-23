@@ -1,0 +1,22 @@
+{
+    "db": {
+        "userName": "",
+        "password": "",
+        "server": "",
+        "options": {
+            "database": "",
+            "encrypt": true,
+            "rowCollectionOnRequestCompletion": true
+        }
+    },
+    "dbSecondary": {
+        "userName": "",
+        "password": "",
+        "server": "",
+        "options": {
+            "database": "",
+            "encrypt": true,
+            "rowCollectionOnRequestCompletion": true
+        }
+    }
+}
