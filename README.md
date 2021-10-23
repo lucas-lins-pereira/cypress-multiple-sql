@@ -13,7 +13,7 @@ On the root of the project create the file two_connection.js (example) under the
 After creation the folder structure should be the same as cypress default as shown below:
 
 	node_modules
-	 cypress
+	cypress
 		fixtures
 			example.json
 		integration
@@ -40,6 +40,7 @@ The default usage of cypress-sql-server is through the command...
 1.  Open the file cypress.json;
 2. Insert a second "db" configuration separated by comma and change its name (we used the dbSecondary as name);
 3. The file should contain:
+
  		{
 			"db": {
 					...
@@ -53,6 +54,7 @@ The default usage of cypress-sql-server is through the command...
 5. Insert the command below between "sqlServer.loadDBPlugin" and "on('task, tasks)";
 `tasks['sqlSecondary:execute'] = sqlServer.loadDBPlugin(dbConfig.dbSecondary)['sqlServer:execute'];`.
 6. The module should be as show belown:
+
 		module.exports = (on, config) => {
   			tasks = sqlServer.loadDBPlugin(dbConfig.db);
  	 		tasks['sqlSecondary:execute'] = sqlServer.loadDBPlugin(dbConfig.dbSecondary)['sqlServer:execute'];
